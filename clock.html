@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .container {
+            width: 100%;
+            height: 100vh;
+            background-color: lightblue;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .clock {
+            width: 500px;
+            height: 500px;
+            background: transparent url('clock.png') center center no-repeat;
+            background-size: contain;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .point-center {
+            position: relative;
+            width: 1px;
+            height: 1px;
+        }
+
+        .arrow {
+            position: absolute;
+            min-width: 100px;
+            /* height: 5px; */
+            background-color: brown;
+            /* padding: 0px 0px 30px 0px; */
+            transform-origin: 20px 50%;
+            top: 0;
+            left: 0;
+            padding-left: 50px;
+            border-radius: 0px 10px 10px 0px;
+
+        }
+
+        .point {
+            position: absolute;
+            top: -5px;
+            left: 5px;
+            width: 25px;
+            height: 25px;
+            background-color: black;
+            z-index: 5;
+            border-radius: 50%;
+        }
+
+        .h {
+            color: red;
+            animation: clockAnim 728s steps(60) infinite;
+            z-index: 4;
+        }
+
+        .m {
+            color: yellow;
+            animation: clockAnim 36s steps(60) infinite;
+            z-index: 3;
+            width: 200px;
+        }
+
+        .s {
+            color: blue;
+            animation: clockAnim 6s steps(60) infinite;
+            z-index: 2;
+            width: 250px;
+            ;
+        }
+
+        @keyframes clockAnim {
+            from {
+                transform: rotate(0deg);
+            }
+
+            to {
+                transform: rotate(350deg);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="clock">
+            <div class="point-center">
+                <div class="arrow h">короткая</div>
+                <div class="arrow m">длинная стрелка</div>
+                <div class="arrow s">и самая длинная секнудная</div>
+                <div class="point"></div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    /*
+    p {
+        animation: translating 4s linear 0s infinite;
+        background: turquoise;
+        color: white;
+        height: 60px;
+        line-height: 60px;
+        margin: 0;
+        position: absolute;
+        text-align: center;
+        width: 60px;
+    }
+
+    span {
+        animation: spanRotate 4s linear 0s infinite;
+        display: block;
+        transform-origin: 0 50%;
+    }
+
+    @keyframes translating {
+        0% {
+            transform: translate(0, 0);
+        }
+
+        25%,
+        35% {
+            transform: translate(240px, 0);
+        }
+
+        50% {
+            transform: translate(240px, 140px) skew(30deg);
+            color: red;
+        }
+
+        75% {
+            transform: translate(0, 140px) skew(-30deg) rotate(90deg);
+            color: blue;
+        }
+
+        100% {
+            transform: translate(0, 0);
+        }
+    }
+
+    @keyframes spanRotate {
+        from {
+            transform: rotate(0deg);
+        }
+
+        to {
+            transform: rotate(360deg);
+        }
+
+    }
+*/
+
+    /*
+
+    p {
+        animation: scaling-toggle 10s steps(1) 0s infinite forwards;
+        background: white;
+        color: grey;
+        left: 2rem;
+        margin: 0;
+        opacity: 0;
+        padding: 0 0.5em;
+        position: absolute;
+        top: 2rem;
+        z-index: 1;
+    }
+
+
+    p:first-child {
+        left: 0;
+        position: relative;
+        top: 0;
+    }
+
+    p:nth-child(2) {
+        animation-delay: 2s;
+    }
+
+    p:nth-child(3) {
+        animation-delay: 4s;
+    }
+
+    p:nth-child(4) {
+        animation-delay: 6s;
+    }
+
+    p:nth-child(5) {
+        animation-delay: 8s;
+    }
+
+    p strong {
+        content: "";
+        display: inline-block;
+    }
+
+    div {
+        animation: scaling 10s linear 0s infinite;
+        background: goldenrod;
+        border-radius: 60px;
+        color: white;
+        height: 120px;
+        line-height: 120px;
+        margin-top: 2rem;
+        ;
+        text-align: center;
+        transition: all 100ms linear;
+        width: 120px;
+    }
+
+    @keyframes scaling {
+        0% {
+            transform: scale(1);
+        }
+
+        19% {
+            transform: scale(1);
+        }
+
+        20% {
+            transform: scale(2);
+        }
+
+        39% {
+            transform: scale(2);
+        }
+
+        40% {
+            transform: scale(0.5);
+        }
+
+        59% {
+            transform: scale(0.5);
+        }
+
+        60% {
+            transform: scale(0);
+        }
+
+        79% {
+            transform: scale(0);
+        }
+
+        80% {
+            transform: scale(-1);
+        }
+
+        99% {
+            transform: scale(-1);
+        }
+
+        100% {
+            transform: scale(1);
+        }
+    }
+
+    @keyframes scaling-toggle {
+        0% {
+            opacity: 1;
+        }
+
+        20% {
+            opacity: 0;
+        }
+
+        100% {
+            opacity: 0;
+        }
+    }
+    */
+
+    /*
+
+    @keyframes skewing {
+        0% {
+            transform: skew(0deg);
+        }
+
+        20% {
+            transform: skew(10deg);
+        }
+
+        40% {
+            transform: skew(45deg);
+        }
+
+        60% {
+            transform: skew(90deg);
+        }
+
+        80% {
+            transform: skew(120deg);
+        }
+
+        100% {
+            transform: skew(0deg);
+        }
+    }
+
+    p {
+         animation: skewing 3s steps(1) 0s infinite; 
+          } */
+
+    /*
+
+    #zoom-animation {
+        perspective: 5000px;
+        transform-style: preserve-3d;
+    }
+
+    #zoom-animation div,
+    #zoom-animation p {
+        background: midnightblue;
+        color: white;
+        height: 200px;
+        line-height: 200px;
+        margin: 0;
+        position: relative;
+        text-align: center;
+        width: 200px;
+        position: absolute;
+        top:300px;
+        left:300px;
+        transform-origin: 100% 100%;
+    }
+
+    #zoom-animation p {
+        animation: zooming 5s alternate infinite both;
+        background: limegreen;
+        left: 2rem;
+        opacity: 0.7;
+        position: absolute;
+        top: 2rem;
+    }
+
+    div {
+        animation: zooming 20s ease-in-out infinite both;
+    }
+
+    @keyframes zooming {
+        0% {
+            transform: translate3d(0, 0, 0) rotateX(0deg);
+        }
+
+        100% {
+            transform: translate3d(50px, 20px, 20px) rotateX(360deg) rotateZ(360deg) rotateY(360deg);
+        }
+    }
+    */
+    /*
+
+    @keyframes bouncing {
+        0% {
+            bottom: 0;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+        }
+
+        100% {
+            bottom: 50px;
+            box-shadow: 0 50px 50px rgba(0, 0, 0, 0.1);
+        }
+    }
+
+    a {
+        animation: bouncing 0.5s cubic-bezier(.1, .25, .1, 1) 0s infinite alternate both;
+        background: lightslategrey;
+        border-radius: 2px;
+        display: inline-block;
+        color: white;
+        cursor: pointer;
+        font-size: 0.75rem;
+        font-weight: 300;
+        letter-spacing: 0.2em;
+        padding: 1em 2em 1.1em;
+        position: relative;
+        text-decoration: none;
+        text-transform: uppercase;
+        vertical-align: top;
+        margin-top: 50px;
+    } 
+    */
+    /*
+    @keyframes around {
+        0% {
+            left: 0;
+            top: 0;
+        }
+
+        25% {
+            left: 240px;
+            top: 0;
+        }
+
+        50% {
+            left: 240px;
+            top: 140px;
+        }
+
+        75% {
+            left: 0;
+            top: 140px;
+        }
+
+        100% {
+            left: 0;
+            top: 0;
+        }
+    }
+
+    p {
+        animation: around 4s linear 0s infinite;
+        background: turquoise;
+        color: white;
+        height: 60px;
+        line-height: 60px;
+        margin: 0;
+        position: absolute;
+        text-align: center;
+        width: 60px;
+    }*/
+
+
+    p {
+        color: grey;
+        margin: 0;
+        position: relative;
+    }
+
+    p:first-child {
+        margin-bottom: 1rem;
+    }
+
+    p span {
+        animation: toggle 6s infinite both;
+        left: 0;
+        position: absolute;
+    }
+
+    p:first-child span {
+        animation-name: tabs;
+        margin-right: 1rem;
+        position: static;
+    }
+
+    p span:nth-child(1) {
+        animation-delay: 0;
+        position: static;
+    }
+
+    p span:nth-child(2) {
+        animation-delay: 2s;
+    }
+
+    p span:nth-child(3) {
+        animation-delay: 4s;
+    }
+
+    div {
+        background: white;
+        height: 20px;
+        margin-bottom: 1rem;
+        width: 220px;
+    }
+
+    div div {
+        animation: race-none 6s linear infinite;
+        background: crimson;
+        height: 20px;
+        margin-bottom: 0;
+        position: relative;
+        width: 20px;
+    }
+
+    div:nth-child(7) div {
+        animation-name: race-forwards;
+    }
+
+    div:nth-child(10) div {
+        animation-name: race-backwards;
+    }
+
+    div:nth-child(13) div {
+        animation-name: race-both;
+    }
+
+    @keyframes tabs {
+        0% {
+            opacity: 0.2;
+        }
+
+        1% {
+            opacity: 1;
+        }
+
+        33% {
+            opacity: 1;
+        }
+
+        34% {
+            opacity: 0.2;
+        }
+
+        100% {
+            opacity: 0.2;
+        }
+    }
+
+    @keyframes toggle {
+        0% {
+            opacity: 0;
+        }
+
+        1% {
+            opacity: 1;
+        }
+
+        33% {
+            opacity: 1;
+        }
+
+        34% {
+            opacity: 0;
+        }
+
+        100% {
+            opacity: 0;
+        }
+    }
+
+    @keyframes race-none {
+        0% {
+            background: crimson;
+            left: 0;
+        }
+
+        33% {
+            background: crimson;
+            left: 0;
+        }
+
+        34% {
+            background: midnightblue;
+            left: 100px;
+        }
+
+        66% {
+            background: mediumseagreen;
+            left: 200px
+        }
+
+        67% {
+            background: crimson;
+            left: 0;
+        }
+
+        100% {
+            background: crimson;
+            left: 0;
+        }
+    }
+
+    @keyframes race-forwards {
+        0% {
+            background: crimson;
+            left: 0;
+        }
+
+        33% {
+            background: crimson;
+            left: 0;
+        }
+
+        34% {
+            background: midnightblue;
+            left: 100px;
+        }
+
+        66% {
+            background: mediumseagreen;
+            left: 200px
+        }
+
+        67% {
+            background: mediumseagreen;
+            left: 200px;
+        }
+
+        100% {
+            background: mediumseagreen;
+            left: 200px;
+        }
+    }
+
+    @keyframes race-backwards {
+        0% {
+            background: midnightblue;
+            left: 100px;
+        }
+
+        33% {
+            background: midnightblue;
+            left: 100px;
+        }
+
+        34% {
+            background: midnightblue;
+            left: 100px;
+        }
+
+        66% {
+            background: mediumseagreen;
+            left: 200px
+        }
+
+        67% {
+            background: crimson;
+            left: 0;
+        }
+
+        100% {
+            background: crimson;
+            left: 0;
+        }
+    }
+
+    @keyframes race-both {
+        0% {
+            background: midnightblue;
+            left: 100px;
+        }
+
+        33% {
+            background: midnightblue;
+            left: 100px;
+        }
+
+        34% {
+            background: midnightblue;
+            left: 100px;
+        }
+
+        66% {
+            background: mediumseagreen;
+            left: 200px
+        }
+
+        67% {
+            background: mediumseagreen;
+            left: 200px;
+        }
+
+        100% {
+            background: mediumseagreen;
+            left: 200px;
+        }
+    }
+</style>
+
+<body>
+
+    <!--
+    <p>Привет, <span>Мир</span></p>
+-->
+    <!--
+    <p><strong>scale(1)</strong>: обычный размер</p>
+    <p><strong>scale(2)</strong>: двойной размер</p>
+    <p><strong>scale(0.5)</strong>: половина размера</p>
+    <p><strong>scale(0)</strong>: нулевой размер (невидим)</p>
+    <p><strong>scale(-1)</strong>: отражение</p>
+    <div>Масштаб</div>
+    -->
+
+    <!--
+    <div id="zoom-animation">
+        <div>Оригинал</div>
+        <p>Преобразование</p>
+    </div>
+-->
+
+    <!--
+<a>Загрузка</a>
+
+-->
+
+    <p>
+        <span><strong>1.</strong> До анимации</span>
+        <span><strong>2.</strong> В процессе анимации</span>
+        <span><strong>3.</strong> После анимации</span>
+    </p>
+    <p><strong>none</strong>: стили анимации не влияют на стиль по умолчанию.</p>
+    <p>
+        <span>Красный по умолчанию</span>
+        <span>От синего к зелёному</span>
+        <span>Обратно к красному</span>
+    </p>
+    <div class="none">
+        <div></div>
+    </div>
+    <p><strong>forwards</strong>: последние стили, применяемые в конце анимации, сохраняются впоследствии.</p>
+    <p>
+        <span>Красный по умолчанию</span>
+        <span>От синего к зелёному</span>
+        <span>Остаётся зелёным</span>
+    </p>
+    <div class="forwards">
+        <div></div>
+    </div>
+    <p><strong>backwards</strong>: стили анимации будут применяться до того, как на самом деле начинается анимация.</p>
+    <p>
+        <span>Уже синий</span>
+        <span>От синего к зелёному</span>
+        <span>Обратно к красному</span>
+    </p>
+    <div class="backwards">
+        <div></div>
+    </div>
+    <p><strong>Both</strong>: стили применяются до и после воспроизведения анимации.</p>
+    <p>
+        <span>Уже синий</span>
+        <span>От синего к зелёному</span>
+        <span>Остаётся зелёным</span>
+    </p>
+    <div class="both">
+        <div></div>
+    </div>
+</body>
+
+</html>
